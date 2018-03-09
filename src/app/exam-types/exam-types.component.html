@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1>Exam Types</h1>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-4" *ngFor="let exam_type of exam_types" style="margin-bottom: 20px;">
+          <div class="card bg-info text-white">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-8">{{exam_type.name}}</div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>Employee Detail</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4" *ngIf="employee.id">
+      <div class="card" [ngClass]="{'bg-info text-white':employee.enabled}">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-8">{{employee.name}}</div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h6 class="card-title">{{employee.position}}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a [routerLink]="['/employees']">back</a>
+</div>

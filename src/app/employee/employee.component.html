@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>Employees</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4" *ngFor="let employee of employees" style="margin-bottom: 20px;">
+        <div class="card" [ngClass]="{'bg-info text-white':employee.enabled}">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-8">{{employee.name}}</div>
+              <div class="col-1"></div>
+              <div class="col-3 float-right">
+                <a [ngClass]="{'text-white':employee.enabled}" [routerLink]="['/employees', employee.id]">open</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">{{employee.position}}</h6>
+            <p class="card-text"></p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1>Clients</h1>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-4" *ngFor="let client of clients" style="margin-bottom: 20px;">
+          <div class="card bg-info text-white">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-8">{{client.name}}</div>
+                <div class="col-1"></div>
+                <div class="col-3 float-right">
+                  <a class="text-white" [routerLink]="['/clients', client.id]">open</a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <h6 class="card-title">{{client.medical_aggrement}}</h6>
+              <p class="card-text">{{client.cpf}}</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>

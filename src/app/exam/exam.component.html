@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1>Exams Detail - {{exam.exam_type.name}}</h1>
+      </div>
+    </div>
+    <div class="row" *ngIf="exam.id">
+      <div class="col-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-8">Employee</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h6>{{exam.employee.name}}</h6>
+            <h6>{{exam.employee.position}}</h6>
+            <h6>R$ {{exam.price}}</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-8">Client</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h6>{{exam.client.name}}</h6>
+            <h6>{{exam.client.cpf}}</h6>
+            <h6>{{exam.client.medical_agreement}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a [routerLink]="['/exams']">back</a>
+  </div>
